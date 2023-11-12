@@ -1,0 +1,225 @@
+.section {
+  padding-block: 10vh;
+}
+
+.container {
+  width: calc(100vw - 100px);
+  padding: 15px;
+  max-width: 1200px;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  border-radius: 20px;
+  margin: auto;
+  background: var(--black);
+  color: var(--white);
+}
+
+
+/* ROW 1 */
+.row1 {
+  padding: 40px;
+  border-radius: 20px;
+  background: var(--color-5);
+  color: var(--black);
+  text-align: center;
+  background: url('../../assets/AboutShape1.png') no-repeat var(--color-5);
+  background-size: contain;
+}
+
+.row1 h2 {
+  font-size: calc(2rem + 1.5vw);
+  font-weight: 300;
+  letter-spacing: -2px;
+  line-height: 1.1;
+}
+
+.row1 h2 strong {
+  font-weight: 700;
+}
+
+
+/* ROW 2 */
+.row2 {
+  display: flex;
+  gap: 15px;
+}
+
+.col1,
+.col2 {
+  flex: 1;
+}
+
+.col1 {
+  display: flex;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background: url('../../assets/about.jpg') no-repeat top center;
+  background-size: cover;
+}
+
+.col2 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.aboutCard {
+  padding: 40px;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.aboutCard p {
+  font-size: 1.5rem;
+  line-height: 140%;
+  font-weight: 300;
+  letter-spacing: -.5px;
+}
+
+.aboutCard:nth-child(1) {
+  color: var(--black);
+  background: url('../../assets/AboutShape2.png') no-repeat #fff;
+  background-size: contain;
+  background-position: right center;
+}
+
+.aboutCard:nth-child(2) {
+  background: url('../../assets/AboutShape3.png') no-repeat #001C34;
+  background-size: contain;
+  background-position: right center;
+}
+
+.aboutCard:nth-child(2) strong {
+  color: var(--color-5);
+}
+
+
+/* ROW 3 */
+.row3 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  position: relative;
+}
+
+.row3>h2 {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  z-index: 3;
+  text-transform: lowercase;
+  font-size: calc(2.25rem + 3vw);
+  font-weight: 900;
+  width: 80vw;
+  text-align: center;
+  line-height: 1;
+  text-shadow: 5px 5px 0px #E4951D;
+  -webkit-text-stroke: var(--black);
+  -webkit-text-stroke-width: 2px;
+  letter-spacing: 1px;
+}
+
+.cardCustomer {
+  display: flex;
+  min-width: 300px;
+  flex: 1;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  padding: 60px 40px 40px 40px;
+  border-radius: 20px;
+  background: #090909;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardCustomer::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: var(--color-5);
+  filter: blur(70px);
+}
+
+.cardCustomer span {
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.cardCustomer span img {
+  height: 36px;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+.cardCustomer h3 {
+  font-size: calc(1rem + 1vw);
+  font-weight: 500;
+  line-height: 1.3;
+  z-index: 2;
+  letter-spacing: .5px;
+}
+
+
+/* RESPONSIVE DESING */
+@media screen and (max-width: 1059px) {
+  .cardCustomer {
+    align-items: center;
+    text-align: center;
+  }
+
+  .cardCustomer::before {
+    left: 50%;
+    transform: translateX(-50%);
+    filter: blur(100px);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .row1 h2 {
+    font-size: calc(1.5rem + 1.5vw);
+  }
+
+  .col2 {
+    flex: 2;
+  }
+
+  .aboutCard p {
+    font-size: 20px;
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+  .row2 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .col1 {
+    height: 50vh;
+    flex: none;
+  }
+
+  .row3>h2 {
+    font-size: calc(1.5rem + 3vh);
+    top: -10px;
+  }
+}

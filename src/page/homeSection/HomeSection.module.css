@@ -1,0 +1,90 @@
+.section {
+  min-height: 100vh;
+  padding: 5vh 5vw 10vh 5vw;
+  background-color: var(--background-1);
+  animation: var(--animation-fade-in);
+  background: url('../../assets/ArrowHomeBackground.png') no-repeat;
+  background-size: 80%;
+  background-position: -100% top;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainTitle {
+  font-family: var(--title-font);
+  font-size: calc(3rem + 3vw);
+  font-weight: 400;
+  line-height: 80%;
+  max-width: 600px;
+}
+
+.mainTitle > span {
+  position: relative;
+}
+
+.pattern {
+  object-fit: contain;
+  position: absolute;
+  bottom: 10px;
+  right: -60px;
+  display: inline-block;
+  pointer-events: none;
+  user-select: none;
+}
+
+.paragraph {
+  font-size: 18px;
+  margin-block: 40px;
+  max-width: 450px;
+  line-height: 150%;
+}
+
+.col1 > span {
+  display: flex;
+  gap: 30px;
+}
+
+.secondaryButton {
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  background: none;
+  padding-inline: 20px;
+  border: none;
+}
+
+.secondaryButton img {
+  pointer-events: none;
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: -5px 5px 20px 0px rgba(65, 65, 65, 0.20);
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  transition: var(--transition);
+}
+
+.button:hover .arrow {
+  transform: translateX(5px);
+}
+
+.col2 {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  height: calc(100vh - 80px);
+  object-fit: contain;
+}

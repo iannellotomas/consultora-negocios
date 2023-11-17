@@ -1,0 +1,358 @@
+.section {
+  padding-block: 10vh;
+}
+
+.container {
+  width: calc(100vw - 100px);
+  padding: 40px;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  margin: auto;
+  background: var(--color-5);
+  overflow: hidden;
+}
+
+.container>h2 {
+  color: var(--black);
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.row1 {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.casesVideoCard {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.25);
+}
+
+.casesVideoCard .cardImage {
+  max-height: 350px;
+  position: relative;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.casesVideoCard .cardImage img {
+  width: 100%;
+  height: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  object-position: top;
+  user-select: none;
+  pointer-events: none;
+  border-radius: 20px;
+  transition: var(--transition);
+}
+
+.casesVideoCard .cardImage span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.25);
+  width: 60px;
+  height: 60px;
+  border-radius: 500px;
+  background: #000000c3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.casesVideoCard .cardInfo {
+  padding: 70px 40px 40px 40px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.casesVideoCard .cardInfo .logo {
+  position: absolute;
+  top: -70px;
+  width: 300px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.casesVideoCard .cardInfo p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+
+.casesVideoCard:hover .cardImage img {
+  filter: brightness(60%);
+}
+
+.casesVideoCard:hover .cardImage span {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+
+.row2 {
+  display: flex;
+  justify-content: center;
+  gap: -100px;
+  flex-wrap: wrap;
+  padding-inline: 20px;
+  margin-block: 30px;
+}
+
+.logoCard {
+  width: 160px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%;
+  margin-left: -30px;
+  box-shadow: 5px 10px 0px 0px #00000040;
+}
+
+.logoCard img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+
+.logoCard:last-child {
+  background: #B8802C;
+  color: #fff;
+}
+
+.logoCard h3 {
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: -5px;
+}
+
+.logoCard p {
+  text-transform: uppercase;
+  font-size: 14px;
+  opacity: .8;
+  font-weight: 300;
+}
+
+
+
+.row3 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  position: relative;
+}
+
+.sucessCaseCard {
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 10px 10px 0px 0px #00000040;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.sucessCaseCard > *{
+  flex: 1;
+}
+
+.sucessCaseCard .cardImage {
+  width: 50%;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.sucessCaseCard .cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.sucessCaseCard .cardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 40px 40px 40px 20px;
+}
+
+.sucessCaseCard .cardInfo span {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+.sucessCaseCard h3 {
+  font-size: 1.5rem;
+}
+
+.sucessCaseCard .services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sucessCaseCard .serviceChip {
+  padding: 7px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff1dc;
+  border-radius: 50px;
+  color: #976823;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.sucessCaseCard .serviceChip svg {
+  transition: var(--transition);
+}
+
+.sucessCaseCard .serviceChip:hover {
+  box-shadow: 0 2px 5px #7676765b;
+}
+
+.sucessCaseCard .serviceChip:hover svg {
+  transform: translate(2px, -2px);
+}
+
+
+.sucessCaseCard .cardInfo p {
+  font-size: 1rem;
+}
+
+.loadMoreButton {
+  width: calc(100vw - 100px);
+  padding: 30px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  position: absolute;
+  bottom: 0;
+  box-shadow: 0 100px 50px 150px var(--color-5);
+  background: var(--color-5);
+}
+
+.loadMoreButton span {
+  display: flex;
+  margin-inline: auto;
+  align-items: center;
+  width: max-content;
+  font-weight: 600;
+  gap: 15px;
+  flex-grow: 1;
+  padding: 10px 30px;
+  border-radius: 500px;
+  color: #fff;
+  background: #000000de;
+  transition: var(--transition);
+}
+
+.loadMoreButton:hover span {
+  background: #000000f8;
+}
+
+.loadMoreButton span svg {
+  transition: var(--transition);
+}
+
+.row3:not(.loadMore) .loadMoreButton span svg {
+  transform: rotate(-180deg);
+}
+
+.row3.loadMore > *:nth-child(3) {
+  clip-path: inset(0 0 10% 0);
+  height: 250px;
+  pointer-events: none;
+}
+
+.row3:not(.loadMore) {
+  padding-bottom: 100px;
+}
+
+.row3:not(.loadMore) .loadMoreButton {
+  box-shadow: none;
+  bottom: -20px;
+}
+
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 1100px) {
+  .row1 {
+    flex-direction: column;
+  }
+
+  .row3 .sucessCaseCard {
+    flex-direction: column;
+    max-width: 800px;
+  }
+
+  .sucessCaseCard .cardImage {
+    width: 100%;
+    height: 300px;
+  }
+
+  .sucessCaseCard .cardImage img {
+    max-height: 350px;
+  }
+
+  .sucessCaseCard .cardInfo {
+    padding: 20px 40px 40px 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100vw;
+    border-radius: 0;
+  }
+
+  .row1 .logo {
+    transform: scale(.7) translateY(-10px);
+  }
+
+  .row1 .cardInfo {
+    padding-top: 50px;
+  }
+
+  .row2 {
+    transform: scale(.8);
+    padding: 0;
+    margin-block: -20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    padding-inline: 20px;
+  }
+}
